@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo"><img src="../Media/logo.svg" alt="Jobseeker" class="logo-img"></a>
+            <nav class="nav">
+                <a href="./newHome.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="./main.html" class="nav-link"><i class="fas fa-building"></i> Companies</a>
+                <a href="./Addcompanies.html" class="nav-link"><i class="fas fa-search"></i> Add Companies</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="left-bar">
+            <div class="filter-genre">
+                <table class="genre-table-1">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-tech" tabindex="0" type="checkbox"
+                                        value="Data"><label>Data</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-tech" tabindex="0" type="checkbox"
+                                        value="Web Development"><label>Web Development</label></div>
+                            </td>
+                        </tr>
+                        <tr class="extra">
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-tech" tabindex="0" type="checkbox"
+                                        value="Media"><label>Media</label></div>
+                            </td>
+                        </tr>
+                        <tr class="extra">
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-tech" tabindex="0" type="checkbox"
+                                        value="Cloud"><label>Cloud</label></div>
+                            </td>
+                        </tr>
+                        <tr class="extra">
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-tech" tabindex="0" type="checkbox"
+                                        value="App Development"><label>App Development</label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="toggle-button-1">View More</button>
+            </div>
+            <div class="filter-genre">
+                <table class="genre-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-type" tabindex="0" type="checkbox"
+                                        value="Indian MNC"><label>Indian MNC</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-type" tabindex="0" type="checkbox"
+                                        value="Foreign MNC"><label>Foreign MNC</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-type" tabindex="0" type="checkbox"
+                                        value="Startup"><label>Startup</label></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-type" tabindex="0" type="checkbox"
+                                        value="Govt/Psu"><label>Govt/Psu</label></div>
+                            </td>
+                        </tr>
+                        <tr class="extra">
+                            <td>
+                                <div class="ui-checkbox"><input class="company-filter-type" tabindex="0" type="checkbox"
+                                        value="Corporate"><label>Corporate</label></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="toggle-button">View More</button>
+            </div>
+            <div class="filter-genre">
+                <label>
+                    <input type="radio" name="location-filter" value="Remote" id="company-filter-remote">Remote
+                </label>
+                <label>
+                    <input type="radio" name="location-filter" value="Local" id="company-filter-local">Local
+                </label>
+
+            </div>
+            <div class="filter-genre">
+                <label><input type="range" min="-1" max="4" value="-1" class="slider" id="company-filter-size"
+                        step="1">Team Size</label>
+                <span id="range-value">All sizes</span>
+            </div>
+            <div class="filter-genre">
+                <label>
+                    <input type="radio" name="kind-filter" value="Full-time" id="company-filter-kind">Full-time
+                </label>
+                <label>
+                    <input type="radio" name="kind-filter" value="Internship" id="company-filter-kind">Internship
+                </label>
+                <label>
+                    <input type="radio" name="kind-filter" value="Part-time" id="company-filter-kind">Part-time
+                </label>
+
+            </div>
+            <div class="filter-genre">
+                <label><input type="range" min="-1" max="3" value="-1" class="slider" id="company-filter-experience"
+                        step="1">Experience level</label>
+                <span id="range-exp">Experience</span>
+            </div>
+
+        </div>
+        <div class="right-bar">
+            <div class="company" data-company="Web Development" data-tags="Corporate" data-location="Remote"
+                data-size="45" data-kind="Internship" data-exp="2">
+                <div class="Com-details">
+                    <div><img src="../Media/team-building.png" alt=""></div>
+           
+                    <a href="../HTML/Tocompany.html">
+                    <h1 class="underline">BerkLy and Sons</h1>
+                    </a>
+
+                </div>
+                <div class="summary">
+                <h3 class="Summary">Description:</h3>
+                </div>
+                <p>We are looking for a talented Graphic Designer to join our creative team. You will be responsible for creating visual content for our website, social media, and marketing materials. Proficiency in Adobe Creative Suite, a strong portfolio, and a keen eye for detail are essential for this role</p>
+                    
+                <ul class="tag">
+                    <li class="innertag">Web Development</li>
+                    <li class="innertag">Remote</li>
+                    <li class="innertag item toggle-item">Indian MNC</li>
+
+                    <button id="btnn">+</button>
+                </ul>
+
+            </div>
+            <div class="company" data-company="Data" data-tags="Indian MNC" data-location="Local" data-size="5"
+                data-kind="Full-time" data-exp="4">
+                <div class="Com-details">
+                    <div><img src="../Media/team-building.png" alt=""></div>
+                    <h1>DataForce</h1>
+                </div>
+                <h3 class="Summary">Summary:</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium, amet at sint,
+                    temporibus ut fuga facilis mollitia magnam autem, cupiditate nobis eveniet iste similique quibusdam
+                    libero. Quidem, quo dolor.</p>
+                <div class="tag">
+                    <div class="innertag">Indian MNC</div>
+                    <div class="innertag">Local</div>
+
+                </div>
+            </div>
+            <div class="company" data-company="Media" data-tags="Foreign MNC" data-location="Remote" data-size="6"
+                data-kind="Part-time" data-exp="6">
+                <div class="Com-details">
+                    <div><img src="../Media/team-building.png" alt=""></div>
+                    <h1>New Tokyo</h1>
+                </div>
+                <h3 class="Summary">Summary:</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium, amet at sint,
+                    temporibus ut fuga facilis mollitia magnam autem, cupiditate nobis eveniet iste similique quibusdam
+                    libero. Quidem, quo dolor.</p>
+                <div class="tag">
+                    <div class="innertag">Foreign MNC</div>
+                    <div class="innertag">Remote</div>
+
+                </div>
+            </div>
+            <div class="company" data-company="Web Development" data-tags="Corporate" data-location="Local"
+                data-size="14" data-kind="Internship">
+                <div class="Com-details">
+                    <i class="fas fa-user-circle"></i>
+                    <h1>Happi.io</h1>
+                </div>
+                <h3 class="Summary">Summary:</h3>
+                <div class="summary"></div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium, amet at sint,
+                    temporibus ut fuga facilis mollitia magnam autem, cupiditate nobis eveniet iste similique quibusdam
+                    libero. Quidem, quo dolor.</p>
+                <div class="tag">
+                    <div class="innertag">Web Development</div>
+                    <div class="innertag">Local</div>
+
+                </div>
+            </div>
+            <div class="company" data-company="Data" data-tags="Indian MNC" data-location="Remote">
+                <div class="Com-details">
+                    <i class="fas fa-user-circle"></i>
+                    <h1>New Sphere</h1>
+                </div>
+                <h3 class="Summary">Summary:</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium, amet at sint,
+                    temporibus ut fuga facilis mollitia magnam autem, cupiditate nobis eveniet iste similique quibusdam
+                    libero. Quidem, quo dolor.</p>
+                <div class="tag">
+                    <div class="innertag">Indian MNC</div>
+                    <div class="innertag">Remote</div>
+
+                </div>
+            </div>
+            <div class="company" data-company="Media" data-tags="Foreign MNC" data-location="Local"
+                data-kind="Internship">
+                <div class="Com-details">
+                    <i class="fas fa-user-circle"></i>
+                    <h1>BerkLy and Sons</h1>
+                </div>
+                <h3 class="Summary">Summary:</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae laudantium, amet at sint,
+                    temporibus ut fuga facilis mollitia magnam autem, cupiditate nobis eveniet iste similique quibusdam
+                    libero. Quidem, quo dolor.</p>
+                <div class="tag">
+                    <div class="innertag">Internship</div>
+                    <div class="innertag">Local</div>
+
+                </div>
+            </div>
+        </div>
+        <script src="../JS/mainScript.js"></script>
+</body>
+
+</html>
+

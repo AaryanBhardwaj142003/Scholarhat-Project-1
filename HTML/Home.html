@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/mainHome.css">
+</head>
+
+<body>
+    <nav id="nav-Vid0" class="w-full p-2 lg:p-3 z-40 flex items-center justify-between fixed">
+        <a
+            class="flex focus-visible:ring-4 ring-brand items-center p-1 rounded" href="/en">
+            <div class="flex items-center text-gray-900 h-8"><img src="../Media/logo.svg" alt="Jobseeker"
+                    class="h-full"></div>
+        </a>
+        <div
+            class="hidden absolute stable-rtl:translate-x-1/2 stable-ltr:-translate-x-1/2 start-1/2 md:flex bi-space-x-7 items-center justify-center">
+            <div class="relative"><button id="tools-button-Vid1"
+                    class="text-gray-500 focus-visible:ring-4 ring-brand can-hover:hover:text-gray-900 rounded lg:text-lg py-1 px-2 lg:py-2 lg:px-4"
+                    type="button"><span id="tools-chevron-Vid1"
+                        class="flex justify-between items-center"><span>Home</span><span class="relative"></span> </span></button>
+               
+            </div><a
+                class="text-gray-500 focus-visible:ring-4 ring-brand can-hover:hover:text-gray-900 rounded lg:text-lg py-1 px-2 lg:py-2 lg:px-4"
+                href="../HTML/main.html">Find Jobs</a><a
+                class="text-gray-500 focus-visible:ring-4 ring-brand can-hover:hover:text-gray-900 rounded lg:text-lg py-1 px-2 lg:py-2 lg:px-4"
+                href="../HTML/Addcompanies.html">Add Jobs</a>
+        </div>
+       
+    </nav>
+
+
+    <div class="part2">
+        <div class="image-overlay-container">
+            <img src="../Media/istockphoto-1488493940-170667a.webp" alt="" class="img2">
+            <div class="overlay-text">"Welcome to Jobseek!! your one stop solution for finding job"</div>
+        </div>
+    </div>
+    
+    <div class="seperation"></div>
+
+    
+
+    <div class="content">
+        <div class="part1">
+            <img src="../Media/Coorpoate img 1.jpeg" alt="" class="img1">
+            <div class="text1">Our job filtering app is designed to streamline the job search process by allowing users
+                to easily find companies that match their specific criteria. Whether you're looking for remote work,
+                specific industries, or companies with particular benefits, our app provides a simple, user-friendly
+                interface to quickly filter and find the perfect fit. Users can add new companies with detailed
+                attributes and filter out companies that don't meet their needs. This makes the job search efficient and
+                tailored to individual preferences, saving time and ensuring better job matches.
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+        <hr>
+    <div class="heading">
+        <h2 class="heading">Our Customers</h2>
+    </div>
+     
+
+
+
+    <div class="slider-container">
+        <button class="prev">&lt;</button>
+        <div class="slider">
+            <div class="slide"><img src="../Media/p1.jpeg" alt=""></div>
+            <div class="slide"><img src="../Media/p2.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p3.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p4.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p1.jpeg" alt=""></div>
+            <div class="slide"><img src="../Media/p2.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p3.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p4.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p1.jpeg" alt=""></div>
+            <div class="slide"><img src="../Media/p2.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p3.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p4.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p1.jpeg" alt=""></div>
+            <div class="slide"><img src="../Media/p2.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p3.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p4.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p1.jpeg" alt=""></div>
+            <div class="slide"><img src="../Media/p2.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p3.jpeg" alt="" sizes="" srcset=""></div>
+            <div class="slide"><img src="../Media/p4.jpeg" alt="" sizes="" srcset=""></div>
+           
+        </div>
+        <button class="next">&gt;</button>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 Job Filtering App. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="../JS/slider.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.header').addClass('header-scrolled');
+                } else {
+                    $('.header').removeClass('header-scrolled');
+                }
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>

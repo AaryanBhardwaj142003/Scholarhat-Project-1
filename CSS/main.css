@@ -1,0 +1,218 @@
+body {
+    margin: 0px;
+    overflow: hidden; /* Prevent body from scrolling */
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.header {
+    height: 12vh;
+    width: 100%;
+    background-color: yellow;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 88vh; /* Fixed height for the container */
+    background-color: rgb(255, 255, 255);
+}
+
+.left-bar {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(247, 247, 247); 
+    overflow-y: auto; /* Make the left bar scrollable */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.right-bar {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    align-content: flex-start; /* Align items to the start of the container */
+    padding: 10px; /* Add padding to the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.company {
+    width: calc(50% - 16px); 
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    margin: 8px; 
+    box-sizing: border-box; 
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add black shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.Summary {
+    color: rgb(6, 6, 172);
+    margin: 0px;
+    display: flex;
+    
+}
+
+.Com-details {
+    display: flex;
+    align-items: center;
+}
+
+.Com-details h1 {
+    color: blue;
+    margin-left: 9rem;
+}
+
+.Com-details div {
+    height: 8vh;
+    width: 8vh;
+    border: 2px solid black;
+    border-radius: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Com-details div img {
+    height: 86%;
+    /* width: 100%; */
+    object-fit: cover; /* Make sure the image covers the entire container */
+}
+
+
+
+.company p{
+    color: rgb(110, 123, 123);
+}
+
+
+.fas.fa-user-circle {
+    font-size: 4rem; /* Adjust font size for the icon */
+    margin-right: 10px; /* Add space between the icon and the text */
+    margin-left: 2px;
+}
+
+.tag {
+    display: flex;
+    margin-bottom: 2px;
+    padding-left: 2rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+.innertag {
+    border-radius: 12px;
+    width: max-content +5px;
+    background: gold;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+.filter-genre {
+    width: 90%;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add black shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.ui-checkbox {
+    background-color: rgb(233, 252, 252);
+}
+
+.genre-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.genre-table-1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.genre-table td, .genre-table-1 td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.genre-table td:last-child, .genre-table-1 td:last-child {
+    border-bottom: none;
+}
+
+#range-value {
+    margin-left: 20vh;
+}
+
+.toggle-button, .toggle-button-1 {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.toggle-button:hover, .toggle-button-1:hover {
+    background-color: #e0e0e0;
+}
+
+.company:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ensure smooth transition */
+}
+
+.filter-genre:hover {
+    transform: scale(1.02); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Ensure smooth transition */
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

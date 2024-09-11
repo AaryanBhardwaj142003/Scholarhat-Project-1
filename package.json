@@ -1,0 +1,11 @@
+{
+  "name": "scholarhat-projetc--1-job-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mainScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

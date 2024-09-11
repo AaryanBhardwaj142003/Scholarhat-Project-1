@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies</title>
+    <link rel="stylesheet" href="../CSS/companies.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo"><img src="../Media/logo.svg" alt="Jobseeker" class="logo-img"></a>
+            <nav class="nav">
+                <a href="./newHome.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="./main.html" class="nav-link"><i class="fas fa-building"></i> Companies</a>
+                <a href="./Addcompanies.html" class="nav-link"><i class="fas fa-search"></i> Add Companies</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="companies-container" id="companies-container">
+        <!-- Company elements will be dynamically added here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const companiesContainer = document.getElementById('companies-container');
+            const companies = JSON.parse(localStorage.getItem('companies')) || [];
+
+            companies.forEach((company, index) => {
+                const companyElement = document.createElement('div');
+                companyElement.classList.add('company');
+                companyElement.innerHTML = `
+                    <h2>${company.name}</h2>
+                    <p>${company.tags}</p>
+                    <button onclick="viewDetails(${index})">View Details</button>
+                `;
+                companiesContainer.appendChild(companyElement);
+            });
+        });
+
+        function viewDetails(index) {
+            localStorage.setItem('selectedCompanyIndex', index);
+            window.location.href = '/HTML/Tocompany.html';
+        }
+    </script>
+</body>
+</html>

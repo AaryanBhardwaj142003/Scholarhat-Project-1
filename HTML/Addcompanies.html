@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Company</title>
+    <link rel="stylesheet" href="../CSS/Addcompanies.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo"><img src="../Media/logo.svg" alt="Jobseeker" class="logo-img"></a>
+            <nav class="nav">
+                <a href="./newHome.html" class="nav-link underline"><i class="fas fa-home"></i> Home</a>
+                <a href="./main.html" class="nav-link"><i class="fas fa-building"></i> Companies</a>
+                <a href="./Addcompanies.html" class="nav-link"><i class="fas fa-search"></i> Add Companies</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Add a New Company</h2>
+        <hr>
+        <form id="add-company-form">
+            <label for="company-name" class="underline">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="company-tags" class="underline">Type:</label>
+            <input type="text" id="company-tags" name="company-tags" required>
+
+            <label for="company-location" class="underline">Location:</label>
+            <select id="company-location" name="company-location">
+                <option value="Remote">Remote</option>
+                <option value="Local">Local</option>
+            </select>
+
+            <label for="company-size" class="underline">Team Size:</label>
+            <input type="number" id="company-size" name="company-size" required>
+
+            <label for="company-kind" class="underline">Kind:</label>
+            <select id="company-kind" name="company-kind">
+                <option value="Full-time">Full-time</option>
+                <option value="Internship">Internship</option>
+                <option value="Part-time">Part-time</option>
+            </select>
+
+            <label for="company-exp" class="underline">Experience Level:</label>
+            <input type="number" id="company-exp" name="company-exp" required>
+
+            <label for="company-des" class="underline">Description:</label>
+            <textarea id="Job_Description" name="company-des" required></textarea>
+
+            <button type="submit">Add Company</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('add-company-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const companyName = document.getElementById('company-name').value;
+            const companyTags = document.getElementById('company-tags').value;
+            const companyLocation = document.getElementById('company-location').value;
+            const companySize = document.getElementById('company-size').value;
+            const companyKind = document.getElementById('company-kind').value;
+            const companyExp = document.getElementById('company-exp').value;
+            const companyDes = document.getElementById('Job_Description').value;
+
+            const newCompany = {
+                name: companyName,
+                tags: companyTags,
+                location: companyLocation,
+                size: companySize,
+                kind: companyKind,
+                exp: companyExp,
+                description: companyDes
+            };
+
+            let companies = JSON.parse(localStorage.getItem('companies')) || [];
+            companies.push(newCompany);
+            localStorage.setItem('companies', JSON.stringify(companies));
+
+            document.getElementById('add-company-form').reset();
+            alert('Company added successfully!');
+        });
+    </script>
+</body>
+</html>
